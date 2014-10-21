@@ -1,0 +1,5 @@
+{application, stache, [
+  {description, "Mustache template language implementation"},
+  {vsn, "0.1"},
+  {applications, [kernel, stdlib]}
+]}.
