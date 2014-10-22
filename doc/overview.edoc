@@ -2,16 +2,17 @@
 
 @doc
 
+<pre lang="erlang">1> stache:render(&lt;&lt;"My {{key}}!", #{&lt;&lt;"key"&gt;&gt; =&gt; &lt;&lt;"value"&gt;&gt;}).
+[&lt;&lt;"My "&gt;&gt;,&lt;&lt;"value"&gt;&gt;,&lt;&lt;"!"&gt;&gt;]</pre>
+
 <h1>Todo</h1>
 
-<ul>
-    <li><del>Interpolation</del></li>
-    <li>Sections</li>
-    <li>Comments</li>
-    <li>Delimiters</li>
-    <li>Inverted</li>
-    <li>Partials</li>
-    <li>Lambdas</li>
-</ul>
+[x] Interpolation
+[ ] Sections
+[ ] Comments
+[ ] Delimiters
+[ ] Inverted
+[ ] Partials
+[ ] Lambdas
 
 @end

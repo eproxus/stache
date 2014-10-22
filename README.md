@@ -2,17 +2,20 @@
 
 # Stache - Mustache Template Language for Erlang #
 
+```erlang
+1> stache:render(<<"My {{key}}!", #{<<"key">> => <<"value">>}).
+[<<"My ">>,<<"value">>,<<"!">>]
+```
+
 
 # Todo #
-* <del>Interpolation</del>
-* Sections
-* Comments
-* Delimiters
-* Inverted
-* Partials
-* Lambdas
-
-
+[x] Interpolation
+[ ] Sections
+[ ] Comments
+[ ] Delimiters
+[ ] Inverted
+[ ] Partials
+[ ] Lambdas
 
 
 ## Modules ##
