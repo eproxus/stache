@@ -19,15 +19,15 @@ render([], _Vars, Result) ->
     Result;
 render([<<"{{">>, <<$&, Var/binary>>, <<"}}">>|Template], Vars, Result) ->
     Value = get(Var, Vars),
-    render(Template, Vars, <<Result/binary, Value/binary>>);
+    render(Template, Vars, [Result, Value]);
 render([<<"{{">>, Var, <<"}}">>|Template], Vars, Result) ->
     Value = get(Var, Vars, [escape]),
-    render(Template, Vars, <<Result/binary, Value/binary>>);
+    render(Template, Vars, [Result, Value]);
 render([<<"{{{">>, Var, <<"}}}">>|Template], Vars, Result) ->
     Value = get(Var, Vars),
-    render(Template, Vars, <<Result/binary, Value/binary>>);
+    render(Template, Vars, [Result, Value]);
 render([Chunk|Template], Vars, Result) ->
-    render(Template, Vars, <<Result/binary, Chunk/binary>>).
+    render(Template, Vars, [Result, Chunk]).
 
 get(Var, Data) -> get(Var, Data, []).
 

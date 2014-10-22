@@ -2,10 +2,7 @@
 
 -include_lib("eunit/include/eunit.hrl").
 
-% API
--export([spec_test_/0]).
-
-%--- API ----------------------------------------------------------------------
+%--- Tests --------------------------------------------------------------------
 
 spec_test_() ->
     {ok, Contents} = file:read_file("../test/mustache_spec/specs/interpolation.json"),
@@ -18,6 +15,6 @@ spec_test_() ->
 generate(Test) ->
     {maps:get(<<"desc">>, Test), fun() -> run(Test) end}.
 
-run(#{<<"template">> := T, <<"data">> := D, <<"expected">> := E} = Test) ->
+run(#{<<"template">> := T, <<"data">> := D, <<"expected">> := E}) ->
     io:format("Expected: ~p~nTemplate: ~p~nData:     ~p~n", [E, T, D]),
-    ?assertEqual(E, stache:render(T, D)).
+    ?assertEqual(E, iolist_to_binary(stache:render(T, D))).
