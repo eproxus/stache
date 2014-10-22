@@ -7,7 +7,6 @@
 spec_test_() ->
     {ok, Contents} = file:read_file("../test/mustache_spec/specs/interpolation.json"),
     JSON = jiffy:decode(Contents, [return_maps]),
-    io:format(user, "~p~n", [JSON]),
     [generate(T) || T <- maps:get(<<"tests">>, JSON)].
 
 %--- Internal -----------------------------------------------------------------
