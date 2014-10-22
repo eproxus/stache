@@ -9,3 +9,6 @@ test-deps: .tmp.config
 
 test: test-deps .tmp.config
 	@rebar -C .tmp.config eunit
+
+test-quick: .tmp.config
+	@rebar -C .tmp.config eunit
