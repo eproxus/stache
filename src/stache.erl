@@ -1,3 +1,4 @@
+% @doc Mustache template renderer.
 -module(stache).
 
 % API
@@ -5,6 +6,8 @@
 
 %--- API ----------------------------------------------------------------------
 
+% @doc Render a template using the supplied variables.
+-spec render(Template::binary(), _) -> iolist().
 render(Template, Vars) ->
     render(chunks(Template), Vars, <<>>).
 

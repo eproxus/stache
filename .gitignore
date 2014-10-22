@@ -3,3 +3,8 @@ ebin
 .rebar
 deps
 .tmp.config
+doc/edoc-info
+doc/stylesheet.css
+doc/*.html
+doc/README.md
+doc/erlang.png
