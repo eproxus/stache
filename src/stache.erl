@@ -13,10 +13,7 @@ render(Template, Vars) ->
 
 %--- Internal -----------------------------------------------------------------
 
-chunks(Template) ->
-    Chunks = re:split(Template, <<"(\{\{\{?|\}\}\}?)">>),
-    io:format("Chunks: ~p~n", [Chunks]),
-    Chunks.
+chunks(Template) -> re:split(Template, <<"(\{\{\{?|\}\}\}?)">>).
 
 render([], _Vars, Result) ->
     Result;
