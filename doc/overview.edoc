@@ -7,14 +7,12 @@
 
 <h1>Todo</h1>
 
-<p>
-[x] Interpolation
-[ ] Sections
-[ ] Comments
-[ ] Delimiters
-[ ] Inverted
-[ ] Partials
-[ ] Lambdas
-</p>
+- [x] Interpolation
+- [ ] Sections
+- [ ] Comments
+- [ ] Delimiters
+- [ ] Inverted
+- [ ] Partials
+- [ ] Lambdas
 
 @end

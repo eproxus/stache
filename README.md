@@ -9,17 +9,13 @@
 
 
 # Todo #
-
-
-[x] Interpolation
-[ ] Sections
-[ ] Comments
-[ ] Delimiters
-[ ] Inverted
-[ ] Partials
-[ ] Lambdas
-
-
+- [x] Interpolation
+- [ ] Sections
+- [ ] Comments
+- [ ] Delimiters
+- [ ] Inverted
+- [ ] Partials
+- [ ] Lambdas
 
 
 ## Modules ##
